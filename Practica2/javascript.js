@@ -16,3 +16,8 @@ function alerta(){
         alert(welcome);
     }
 }
+
+function limpiar(){
+    document.getElementById("name").value = "";
+    document.getElementById("age").value = "";
+}
