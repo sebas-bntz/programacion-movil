@@ -1,3 +1,4 @@
+/* Background content */
 body{
     margin: 0;
     height: 100vh;
@@ -18,7 +19,7 @@ body{
 }
 
 .header-content{
-    position: absolute;
+    position: relative;
 
     width: 50%;
 
@@ -29,10 +30,13 @@ body{
     text-align: center;
 }
 
-.mt-0{
-    margin-top: 0;
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Action button styles */
 .btn{
     position: absolute;
     right: 0;
@@ -53,9 +57,4 @@ body{
 
 .btn-image{
     height: 15px;
-}
-
-.center{
-    justify-content: center;
-    align-items: center;
 }

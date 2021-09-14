@@ -4,18 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="./javascript.js" type="application/javascript"></script>
+
+    <link rel="stylesheet" href="./otro.css">
     <link rel="stylesheet" href="./styles.css">
     <title>Otro</title>
 </head>
 <body>
     <div class="header center">
         <div class="header-content">
-            <h1 class="mt-0">Otro</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Fuga ullam nisi enim earum atque odio hic exercitationem officiis, 
-                sit ad consequatur nemo laudantium officia ea ipsam non culpa temporibus beatae?
-            </p>
+            <h1 class="m-0">Registro de usuarios</h1>
+            <small>Reserva tu espacio</small>
+
+            <div class="form-container center">
+                <div class="rule"></div>
+                <div class="row">
+                    <input type="text" id="name" placeholder="Nombre Completo">
+                    <input type="number" id="age" placeholder="Edad">
+                    <button class="btn" type="button" onclick="alerta()">
+                        <img src="./assets/check.png" class="btn-image">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-spaces">
+            <h1 class="m-0">Invitados</h1>
+            <small>Registrados hasta el momento</small>
+
+            <ul>
+                <div id="list"></div>
+            </ul>
         </div>
     </div>
 </body>
