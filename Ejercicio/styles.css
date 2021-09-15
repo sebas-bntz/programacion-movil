@@ -1,0 +1,55 @@
+/* Background content */
+body{
+    margin: 0;
+    height: 100vh;
+}
+
+/* Utilidades */
+.mt-0{
+    margin-top: 0;
+}
+
+.header{
+    height: 100%;
+
+    background-image: url('./assets/iphone.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.header-content{
+    position: relative;
+    margin-left: 60%;
+
+    width: 25%;
+
+    color: black;
+    background-color: rgba(255,255,255, 0.5);
+    padding: 20px;
+
+    text-align: center;
+
+    border-radius: 20px;
+    
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rose{
+    object-fit: cover;
+
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+
+}
