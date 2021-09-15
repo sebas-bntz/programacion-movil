@@ -11,20 +11,39 @@
     
 </head>
 <body>
-    <div class="header center">
-        <div class="header-content">
-            <h1 id="title" class="mt-0">Iphone 13</h1>
-            <h4 id="subtitle">Subtitulo</h4>
+    <div id="header" class="header center">
+        <div id="headerContent" class="header-content">
+            <div >
+
+                <h1 id="title" class="mt-0">Iphone</h1>
+                <img src="./assets/apple.png" id="apple">
+
+            </div>
+
+            <h4 id="subtitle">Iphone 13</h4>
+
+            <div class="content">
+                <p id="p1">
+                    El mayor avance en cámaras hasta ahora. Un sistema de cámaras Pro completamente nuevo. 
+                    Mejores fotos con poca luz. Capta detalles increíbles con la fotografía macro.
+                </p>
+    
+                <img id="image" src="./assets/camera.png" alt="" id="contentImage">
+
+                <p id="p2">
+                    Pantalla Super Retina XDR con ProMotion. Disfruta de una brillante pantalla, con una respuesta más rápida y fluida.
+                </p>
+
+            </div>
             
-            <p id="p1">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Ad tenetur aspernatur dolores expedita accusamus blanditiis explicabo debitis, 
-                neque quas excepturi facere tempore omnis amet in, esse distinctio quam autem fugit?
-            </p>
-
-            <img id="rose" src="./assets/camera.png" alt="" id="contentImage">
-
-
+            <div id="buttons-container" class="row">
+                <button id="btn1" class="btn" type="button" onclick="changeColor()">
+                    <img src="./assets/light.png" class="btn-image">
+                </button>
+                <button id="btn" class="btn" type="button" onclick="changeText(), changeImg(), changeBackgroundImage()">
+                    <img src="./assets/lines.png" class="btn-image">
+                </button>
+            </div>
         </div>
     </div>
 </body>
