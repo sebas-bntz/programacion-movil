@@ -1,0 +1,78 @@
+body {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header .navbar {
+  background-color: transparent !important;
+  position: fixed;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .navbar li {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+.img-background {
+  background-image: url("assets/background.jpeg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 100px;
+  width: 20%;
+}
+
+.custom-text-pos {
+  top: 200px;
+  right: 278px;
+  width: 20%;
+  position: relative;
+}
+
+.cuadrado {
+  width: 200px;
+  height: 375px;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 50%; /* Posiciona hacia arriba el elemento 50 para el centro del padre */
+  left: 50%; /* Posiciona hacia la izquierda el elemento 50 para el centro del padre */
+  transform: translate(300%, -20%);
+  align-items: center;
+}
+
+.white-square {
+  width: 200px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 1);
+  top: 50%; /* Posiciona hacia arriba el elemento 50 para el centro del padre */
+  left: 50%; /* Posiciona hacia la izquierda el elemento 50 para el centro del padre */
+  transform: translate(200%, 150%);
+}
+
+.date {
+  margin-top: 30px;
+  color: grey;
+  font-size: 13px;
+}
+
+.content {
+  margin-top: 10px;
+}
+
+.explore-now {
+  color: black;
+  margin-top: 25px;
+}
+
+.rule {
+  margin-top: 40px;
+  margin-left: 40px;
+  border-bottom: 1px solid white;
+  width: 55%;
+}
