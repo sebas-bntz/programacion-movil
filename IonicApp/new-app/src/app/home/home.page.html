@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title> Home </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button color="primary" expand="full">
+          <ion-icon slot="start" name="eye-outline"></ion-icon>
+          Ver más
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button color="dark" expand="full" (click)="presentAlert()">
+          <ion-icon slot="start" name="document-lock-outline"></ion-icon>
+          Descargar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list lines="none">
+    <ion-item-sliding *ngFor="let item of sliderOptions">
+      <ion-item-options side="start">
+        <ion-item-option color="success">
+          <ion-icon slot="icon-only" name="checkmark-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+      <ion-item>
+        <ion-icon slot="start" [name]="item.icon"></ion-icon>
+        <ion-label>{{ item.name }}</ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option>
+          <ion-icon slot="icon-only" name="add"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="danger">
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-card *ngFor="let card of cardsArray">
+    <img [src] = "card.image" />
+    <ion-card-header>
+      <ion-card-subtitle>{{card.subtitle}}</ion-card-subtitle>
+      <ion-card-title>{{card.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <small>{{card.description}}</small>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon name="book" slot="start"></ion-icon>
+      <ion-label>Revisar clase</ion-label>
+      <ion-button *ngIf="card.type === 0" fill="outline" slot="end">confirmar</ion-button>
+      <ion-icon *ngIf="card.type === 1" slot="end" color="success" name="checkmark-circle"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
