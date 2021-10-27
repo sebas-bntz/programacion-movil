@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Menú </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Menú</ion-title>
+      <ion-button
+        slot="end"
+        [routerLink]="['/login']"
+        routerLinkActive="router-link-active"
+        expand="block"
+        fill="clear"
+        shape="round"
+      >
+        Salir
+        <ion-icon name="exit-outline"></ion-icon>
+      </ion-button>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <img class="pastor-photo" src="assets/pastor.jpeg" alt="" />
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>Taco al pastor</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Exquisito taco con carne al pastor. Insignia de la casa Tacomatic.
+      <ion-grid fixed>
+        <ion-row class="ion-align-items-end">
+          <ion-col class="button-align" size="12">
+            <ion-button
+              [routerLink]="['/order']"
+              routerLinkActive="router-link-active"
+              fill="outline"
+              shape="round"
+            >
+              Ordenar
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
