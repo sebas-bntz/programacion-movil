@@ -17,42 +17,61 @@ body {
 }
 
 .img-background {
-  background-image: url("assets/background.jpeg");
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.6) 100%, rgba(0,212,255,0) 100%), url("assets/background.jpeg");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
 
-h1 {
-  font-size: 100px;
-  width: 20%;
+.card-img-top{
+  height: 212px;
+  width: 318px;
 }
 
-.custom-text-pos {
-  top: 200px;
-  right: 278px;
-  width: 20%;
+.container-image {
+  height: 300px;
+  width: 420px;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.image-containers-section{
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+.under-container {
   position: relative;
+  bottom: -130px;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+.custom-text-pos{
+  width: 20%;
 }
 
 .cuadrado {
   width: 200px;
   height: 375px;
   background-color: rgba(0, 0, 0, 0.4);
-  top: 50%; /* Posiciona hacia arriba el elemento 50 para el centro del padre */
-  left: 50%; /* Posiciona hacia la izquierda el elemento 50 para el centro del padre */
-  transform: translate(300%, -20%);
   align-items: center;
 }
 
 .white-square {
   width: 200px;
   height: 70px;
+  position: relative;
+  top: -15px;
   background-color: rgba(255, 255, 255, 1);
-  top: 50%; /* Posiciona hacia arriba el elemento 50 para el centro del padre */
-  left: 50%; /* Posiciona hacia la izquierda el elemento 50 para el centro del padre */
-  transform: translate(200%, 150%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .date {
@@ -67,7 +86,7 @@ h1 {
 
 .explore-now {
   color: black;
-  margin-top: 25px;
+  margin: 0;
 }
 
 .rule {
@@ -75,4 +94,62 @@ h1 {
   margin-left: 40px;
   border-bottom: 1px solid white;
   width: 55%;
+}
+
+.carousel .carousel-item {
+  height: 300px;
+}
+
+.carousel-item img {
+    position: absolute;
+    object-fit:cover;
+    top: 0;
+    left: 0;
+    min-height: 200px;
+}
+
+.carousel-section{
+  margin-top: 20px;
+  margin-bottom: 200px;
+  padding: 50px;
+  background-color: #001528;
+  color: white;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .col-one {
+    width: 100%;
+    text-align: center;
+  }
+
+ h1 {
+   font-size: 60px;
+ }
+
+ .cuadrado {
+   margin-top: 30px;
+   width: 80%;
+ }
+
+ .white-square {
+  width: 30%;
+  left: -10%;
+transform: translateX(-50%);
+}
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+
 }

@@ -1,0 +1,7 @@
+{
+  "name": "world",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
