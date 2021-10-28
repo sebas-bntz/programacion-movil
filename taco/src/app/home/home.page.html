@@ -1,0 +1,63 @@
+<ion-content [fullscreen]="true">
+
+  <div class="step_1" *ngIf="currentPage === 1">
+    <div class="container-header shadow" [ngStyle]="{ 'background-image': 'url(' + selectedTaco.image + ')'}">
+      <ion-button class="container-button" (click)="validateTaco()">
+        Confirmar selección
+      </ion-button>
+    </div>
+
+    <div class="false-container"></div>
+
+    <div class="taco-selecter" style="margin-top: 20px;">
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="4" *ngFor="let taco of tacosArray; let i = index">
+            <div (click)="selectTaco(i, taco)" class="taco-item">
+              <ion-badge *ngIf="taco.favorite" class="favorite" color="warning">
+                <ion-icon name="star-outline"></ion-icon>
+              </ion-badge>
+              <div class="taco-image" [ngStyle]="{ 'background-image': 'url(' + taco.image + ')'}"
+                [ngClass]="{'selected': selectedIndexTaco === i}">
+                  <div class="row center" style="width: 100%; height: 50px; font-size: 25px;" [ngClass]="{'row-class': selectedIndexTaco === i}">
+                    <ion-badge style="border-radius: 50%; margin-right: 15px;" color="danger" *ngIf="selectedIndexTaco === i" (click)="removeTaco(i)"><ion-icon name="remove"></ion-icon></ion-badge>
+                    <ion-label class="text-shadow">{{taco.amount}}</ion-label>
+                    <ion-badge style="border-radius: 50%; margin-left: 15px;" color="success" *ngIf="selectedIndexTaco === i" (click)="addTaco(i)"><ion-icon name="add"></ion-icon></ion-badge>
+                  </div>
+              </div>
+              <small>{{taco.name}}</small>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+
+  <div class="step_2" *ngIf="currentPage === 2">
+    <div class="container-header shadow" [ngStyle]="{ 'background-image': 'url(' + selectedTaco.image + ')'}">
+      <ion-button class="container-button" (click)="validateTaco()">
+        Confirmar selección
+      </ion-button>
+    </div>
+    <div class="false-container"></div>
+    <div class="taco-card">
+      <ion-card>
+        <h4 style="margin-left: 20px;">{{selectedTaco.name}}</h4>
+      </ion-card>
+    </div>
+  </div>
+  <ion-footer class="center">
+
+    <div class="row">
+      <small *ngIf="currentPage === 1">Selecciona tu taco</small>
+      <small *ngIf="currentPage === 2">Selecciona tus toppings</small>
+    </div>
+
+    <div class="row" style="margin-top: 10px;">
+      <div style="margin-right: 10px" [ngClass]="currentPage === 1 ? 'full-circle' : 'circle'"></div>
+      <div [ngClass]="currentPage === 2 ? 'full-circle' : 'circle'"></div>
+      <div style="margin-left: 10px;" [ngClass]="currentPage === 3 ? 'full-circle' : 'circle'"></div>
+    </div>
+
+  </ion-footer>
+</ion-content>

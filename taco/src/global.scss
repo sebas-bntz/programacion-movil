@@ -24,3 +24,9 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.shadow {
+     box-shadow: 2px 6px 12px 5px rgba(0,0,0,0.76);
+     -webkit-box-shadow: 2px 6px 12px 5px rgba(0,0,0,0.76);
+     -moz-box-shadow: 2px 6px 12px 5px rgba(0,0,0,0.76);
+}

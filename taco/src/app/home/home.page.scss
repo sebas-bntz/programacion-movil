@@ -1,0 +1,99 @@
+.container-header {
+  position: fixed;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+
+  background-image: url('../../assets/home/taco_1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 300px;
+  width: 100%;
+}
+
+.false-container {
+  height: 300px;
+}
+
+.container-button {
+  border-radius: 15px;
+
+  position: absolute;
+  bottom: 5px;
+}
+
+.taco-item {
+  text-align: center;
+}
+
+.taco-image {
+  border-radius: 15px;
+  height: 120px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorite {
+  border-radius: 50%;
+  position: absolute;
+  right: -2px;
+  top: -5px;
+}
+
+ion-footer {
+  position: fixed;
+  bottom: 0;
+
+  height: 80px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.full-circle {
+  width: 15px;
+  height: 15px;
+  background-color: var(--ion-color-primary);
+  border-radius: 15px;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--ion-color-primary);
+  border-radius: 15px;
+}
+
+.selected {
+  box-shadow: 0px 0px 5px 2px rgb(255 255 255 / 76%);
+  -webkit-box-shadow: 0px 0px 5px 2px rgb(255 255 255 / 76%);
+  -moz-box-shadow: 0px 0px 5px 2px rgb(255 255 255 / 76%);
+}
+
+
+.text-shadow {
+  text-shadow: 1px 1px 2px black;
+}
+
+.row-class {
+  background: rgba(0,0,0,0.5);
+}
